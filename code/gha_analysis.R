@@ -28,4 +28,4 @@ us_hum_agg = us_humanitarian[,.(
 ),by=.(year, `Country Code`, `Country Name`)]
 
 hum_agg = merge(dac_hum_agg, us_hum_agg, by=c("year", "Country Code", "Country Name"), all=T)
-fwrite(hum_agg, "usaid_humanitarian_comparison_22_23.csv")
+fwrite(hum_agg, "output/usaid_humanitarian_comparison_22_23.csv")
